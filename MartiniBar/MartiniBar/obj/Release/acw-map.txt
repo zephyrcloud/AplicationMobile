@@ -6,6 +6,22 @@ MartiniBar.MyActionBarDrawerToogle, MartiniBar;md5641bf29e140ddd2550e9007f2fd311
 MartiniBar.MyActionBarDrawerToogle, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5641bf29e140ddd2550e9007f2fd31194.MyActionBarDrawerToogle
 MartiniBar.MyActionBarDrawerToogle;md5641bf29e140ddd2550e9007f2fd31194.MyActionBarDrawerToogle
 martinibar.MyActionBarDrawerToogle;md5641bf29e140ddd2550e9007f2fd31194.MyActionBarDrawerToogle
+MartiniBar.Fragments.Fragment4, MartiniBar;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment4
+MartiniBar.Fragments.Fragment4, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment4
+MartiniBar.Fragments.Fragment4;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment4
+martinibar.fragments.Fragment4;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment4
+MartiniBar.Fragments.Fragment3, MartiniBar;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment3
+MartiniBar.Fragments.Fragment3, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment3
+MartiniBar.Fragments.Fragment3;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment3
+martinibar.fragments.Fragment3;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment3
+MartiniBar.Fragments.Fragment2, MartiniBar;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment2
+MartiniBar.Fragments.Fragment2, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment2
+MartiniBar.Fragments.Fragment2;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment2
+martinibar.fragments.Fragment2;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment2
+MartiniBar.Fragments.Fragment1, MartiniBar;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment1
+MartiniBar.Fragments.Fragment1, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment1
+MartiniBar.Fragments.Fragment1;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment1
+martinibar.fragments.Fragment1;md5e8004838681ae10c6c6ec2a1ea9e0240.Fragment1
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
