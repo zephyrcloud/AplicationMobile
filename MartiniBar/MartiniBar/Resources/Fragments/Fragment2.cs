@@ -27,5 +27,6 @@ namespace MartiniBar.Fragments
             View view = inflater.Inflate(Resource.Layout.Fragment2,container,false);
             return view;
         }
+        
     }
 }
