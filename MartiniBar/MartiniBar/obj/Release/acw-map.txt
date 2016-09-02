@@ -1,3 +1,7 @@
+MartiniBar.MyListViewAdapter, MartiniBar;md5641bf29e140ddd2550e9007f2fd31194.MyListViewAdapter
+MartiniBar.MyListViewAdapter, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5641bf29e140ddd2550e9007f2fd31194.MyListViewAdapter
+MartiniBar.MyListViewAdapter;md5641bf29e140ddd2550e9007f2fd31194.MyListViewAdapter
+martinibar.MyListViewAdapter;md5641bf29e140ddd2550e9007f2fd31194.MyListViewAdapter
 MartiniBar.MainActivity, MartiniBar;md5641bf29e140ddd2550e9007f2fd31194.MainActivity
 MartiniBar.MainActivity, MartiniBar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5641bf29e140ddd2550e9007f2fd31194.MainActivity
 MartiniBar.MainActivity;md5641bf29e140ddd2550e9007f2fd31194.MainActivity
