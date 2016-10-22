@@ -15,6 +15,7 @@ C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\ob
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\layout\fragment2.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\layout\fragment3.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\layout\fragment4.xml
+C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\layout\listview_row.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\layout\main.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\values\strings.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\drawable\icon.png
@@ -25,7 +26,6 @@ C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\ob
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\res\anim\slide_out.xml
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\R.cs.flag
 C:\Users\jbriceno\Documents\Visual Studio 2015\Projects\MartiniBar\MartiniBar\obj\Release\uploadflags.txt
-C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\res\layout\listview_row.xml
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\bin\Release\MartiniBar.dll.mdb
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\bin\Release\Java.Interop.dll.mdb
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\bin\Release\Mono.Android.dll.mdb
@@ -47,5 +47,7 @@ C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\ob
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\android\assets\System.Xml.dll.mdb
+C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\MartiniBar.csprojResolveAssemblyReference.cache
+C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\res\drawable\martinibarmap.png
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\obj\Release\MartiniBar.dll.mdb
 C:\Users\jbriceno\documents\visual studio 2015\Projects\martinibar\MartiniBar\bin\Release\MartiniBar.dll.mdb

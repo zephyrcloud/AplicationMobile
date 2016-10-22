@@ -16,5 +16,7 @@ namespace MartiniBar
     {
         public string item { get; set; }
         public string price { get; set; }
+        public string description { get; set; }
+        public int idImage { get; set; }
     }
 }

@@ -20,12 +20,16 @@ namespace MartiniBar
         private MyActionBarDrawerToogle mDrawerToogle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
+        private ListView mListView1;
         private ListView mListView2;
         private ListView mListView3;
+        private ListView mListView4;
         private ArrayAdapter mLeftAdapter;
         private List<string> mLeftDataSet;
+        private List<Menu> mItems1;
         private List<Menu> mItems2;
         private List<Menu> mItems3;
+        private List<Menu> mItems4;
         private SupportFragment mCurrentFragment;
         private Fragments.Fragment1 mfragment1;
         private Fragments.Fragment2 mfragment2;
@@ -61,26 +65,28 @@ namespace MartiniBar
 
             mCurrentFragment = mfragment1;
 
-            mLeftDataSet = new List<string>();
-            mLeftDataSet.Add("Item 1");
-            mLeftDataSet.Add("Item 2");
-            mLeftAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mLeftDataSet);
-            mLeftDrawer.Adapter = mLeftAdapter;
-            mDrawerToogle = new MyActionBarDrawerToogle(
-                this,
-                mDrawerLayout,
-                Resource.String.openDrawer,
-                Resource.String.closeDrawer
-                );
 
-            mDrawerLayout.SetDrawerListener(mDrawerToogle);
-            SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetDisplayShowTitleEnabled(true);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            mDrawerToogle.SyncState();
+            /* mLeftDataSet = new List<string>();
+             mLeftDataSet.Add("Item 1");
+             mLeftDataSet.Add("Item 2");
+             mLeftAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mLeftDataSet);
+             mLeftDrawer.Adapter = mLeftAdapter;
+             mDrawerToogle = new MyActionBarDrawerToogle(
+                 this,
+                 mDrawerLayout,
+                 Resource.String.openDrawer,
+                 Resource.String.closeDrawer
+                 );
 
-           
+             mDrawerLayout.SetDrawerListener(mDrawerToogle);
+             SupportActionBar.SetHomeButtonEnabled(true);
+             SupportActionBar.SetDisplayShowTitleEnabled(true);
+             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+             mDrawerToogle.SyncState();*/
+             
         }
+
+      
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -90,30 +96,40 @@ namespace MartiniBar
                     return true;
                 case Resource.Id.action_fragment1:
                     ShowFragment(mfragment1);
+                    mListView1 = FindViewById<ListView>(Resource.Id.myListView1);
+                    mItems1 = new List<Menu>();
+
+                    mItems1.Add(new Menu() { item = "Comidas", idImage = Resource.Drawable.Icon, price = "1", description = "1" });
+                    mItems1.Add(new Menu() { item = "Bebidas", idImage = Resource.Drawable.Icon, price = "1", description = "1" });
+                    mItems1.Add(new Menu() { item = "Reservas", idImage = Resource.Drawable.Icon, price = "1", description = "1" });
+                    mItems1.Add(new Menu() { item = "Contactenos", idImage = Resource.Drawable.Icon, price = "1", description = "1" });
+                    MyListViewAdapter adapter1 = new MyListViewAdapter(this, mItems1);
+                    mListView1.Adapter = adapter1;
+                    mListView1.ItemClick += MessageMethod;
                     return true;
                 case Resource.Id.action_fragment2:
                     ShowFragment(mfragment2);
                     mListView2 = FindViewById<ListView>(Resource.Id.myListView2);
                     mItems2 = new List<Menu>();
-                    mItems2.Add(new Menu() { item = "Personal (2 personas)", price = "$14.000" });
-                    mItems2.Add(new Menu() { item = "Picada Martini", price = "$35.000" });
-                    mItems2.Add(new Menu() { item = "Pizzetas", price = "$8.000" });
-                    mItems2.Add(new Menu() { item = "Paninis", price = "$13.000" });
-                    mItems2.Add(new Menu() { item = "Panini martini", price = "$14.000" });
-                    mItems2.Add(new Menu() { item = "Burguer martini", price = "$13.000" });
-                    mItems2.Add(new Menu() { item = "Bacon Burguer", price = "$14.000" });
-                    mItems2.Add(new Menu() { item = "Perro martini", price = "$12.000" });
-                    mItems2.Add(new Menu() { item = "Chori perro martini", price = "$12.000" });
-                    mItems2.Add(new Menu() { item = "Mozarella Sticks", price = "$9.000" });
+                     mItems2.Add(new Menu() { item = "Personal (2 personas)", price = "$14.000", idImage = Resource.Drawable.Icon , description= "123" });
+                     mItems2.Add(new Menu() { item = "Picada Martini", price = "$35.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Pizzetas", price = "$8.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Paninis", price = "$13.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Panini martini", price = "$14.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Burguer martini", price = "$13.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Bacon Burguer", price = "$14.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Perro martini", price = "$12.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Chori perro martini", price = "$12.000", idImage = Resource.Drawable.Icon, description = "123" });
+                     mItems2.Add(new Menu() { item = "Mozarella Sticks", price = "$9.000", idImage = Resource.Drawable.Icon, description = "123" });
 
                     MyListViewAdapter adapter2 = new MyListViewAdapter(this,mItems2);
-                    mListView2.Adapter = adapter2;
+                    mListView2.Adapter = adapter2;                    
                     return true;
                 case Resource.Id.action_fragment3:
                     ShowFragment(mfragment3);
                     mListView3 = FindViewById<ListView>(Resource.Id.myListView3);
                     mItems3 = new List<Menu>();
-                    mItems3.Add(new Menu() { item = "Whisky Old Par\n500ml", price = "$129.000" });
+                    /*mItems3.Add(new Menu() { item = "Whisky Old Par\n500ml", price = "$129.000" });
                     mItems3.Add(new Menu() { item = "Whisky Old Par\n750ml", price = "$179.000" });
                     mItems3.Add(new Menu() { item = "Whisky Old Par Superior", price = "$25.0000" });
                     mItems3.Add(new Menu() { item = "Whisky Buchanas\n750ml", price = "$179.000" });
@@ -150,18 +166,111 @@ namespace MartiniBar
                     mItems3.Add(new Menu() { item = "Trago doble de Ron", price = "$15.000" });
                     mItems3.Add(new Menu() { item = "Trago doble de Vodka", price = "$15.000" });
                     mItems3.Add(new Menu() { item = "Smirnoff Ice\n355 ml", price = "$9.000" });
-
+                    */
                     MyListViewAdapter adapter3 = new MyListViewAdapter(this, mItems3);
                     mListView3.Adapter = adapter3;
                     return true;
                 case Resource.Id.action_fragment4:
                     ShowFragment(mfragment4);
+                    mListView4 = FindViewById<ListView>(Resource.Id.myListView4);
+                    mItems4 = new List<Menu>();
+                    mItems4.Add(new Menu() { item = "Facebook", price = "www.martinibar.com.co", idImage = Resource.Drawable.Icon, description = "Martinibar Bucaramanga" });
+                    mItems4.Add(new Menu() { item = "Direccion", description = "Calle 48 No. 32-32" , price = "Cabecera", idImage = Resource.Drawable.martinibarmap});
+                    mItems4.Add(new Menu() { item = "Telefonos", description = "318 347 4685 - 316 268 8925", price = "652 00 99 - 691 3707", idImage = Resource.Drawable.Icon  });
+                    MyListViewAdapter adapter4 = new MyListViewAdapter(this, mItems4);
+                    mListView4.Adapter = adapter4;
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
             }
            /* mDrawerToogle.OnOptionsItemSelected(item);
             return base.OnOptionsItemSelected(item);*/
+        }
+
+        void MessageMethod(object sender, AdapterView.ItemClickEventArgs e) {
+            /*Android.Support.V7.App.AlertDialog.Builder builder;
+            builder = new Android.Support.V7.App.AlertDialog.Builder(this);
+            builder.SetTitle("Error");
+            builder.SetMessage("You clicked on "+ e.Id);
+            builder.SetCancelable(false);
+            builder.SetPositiveButton("OK", delegate { Finish(); });
+            builder.Show();*/
+            switch (e.Id) {
+                case 0: //comidas
+                    ShowFragment(mfragment2);
+                    mListView2 = FindViewById<ListView>(Resource.Id.myListView2);
+                    mItems2 = new List<Menu>();
+                    mItems2.Add(new Menu() { item = "Personal (2 personas)", price = "$14.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Picada Martini", price = "$35.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Pizzetas", price = "$8.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Paninis", price = "$13.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Panini martini", price = "$14.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Burguer martini", price = "$13.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Bacon Burguer", price = "$14.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Perro martini", price = "$12.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Chori perro martini", price = "$12.000", idImage = Resource.Drawable.Icon, description = "123" });
+                    mItems2.Add(new Menu() { item = "Mozarella Sticks", price = "$9.000", idImage = Resource.Drawable.Icon, description = "123" });
+
+                    MyListViewAdapter adapter2 = new MyListViewAdapter(this, mItems2);
+                    mListView2.Adapter = adapter2;
+                    break;
+                case 1: //bebidas
+                    ShowFragment(mfragment3);
+                    mListView3 = FindViewById<ListView>(Resource.Id.myListView3);
+                    mItems3 = new List<Menu>();
+                    /*mItems3.Add(new Menu() { item = "Whisky Old Par\n500ml", price = "$129.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Old Par\n750ml", price = "$179.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Old Par Superior", price = "$25.0000" });
+                    mItems3.Add(new Menu() { item = "Whisky Buchanas\n750ml", price = "$179.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Buchanas\n375ml", price = "$119.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Johnnie Walker Red\n750ml", price = "$109.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Johnnie Walker Black\n750ml", price = "$179.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Something Special\n375ml", price = "$79.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Something Special\n750ml", price = "$109.000" });
+                    mItems3.Add(new Menu() { item = "Whisky Grants", price = "$109.000" });
+
+                    mItems3.Add(new Menu() { item = "Vodka Absolut", price = "$119.000" });
+                    mItems3.Add(new Menu() { item = "Vodka Absolut\n375 ml", price = "$79.000" });
+                    mItems3.Add(new Menu() { item = "Vodka Smirnoff", price = "$11.0000" });
+                    mItems3.Add(new Menu() { item = "Vodka Smirnoff\n375 ml", price = "$69.000" });
+
+                    mItems3.Add(new Menu() { item = "Ginebra Gordons Gin\n750 ml", price = "$13.0000" });
+                    mItems3.Add(new Menu() { item = "Ginebra Tanqueary\n750 ml", price = "$159.000" });
+
+                    mItems3.Add(new Menu() { item = "Jose Cuervo\n750 ml", price = "$129.000" });
+                    mItems3.Add(new Menu() { item = "Jose Cuervo\n375 ml", price = "$79.000" });
+
+                    mItems3.Add(new Menu() { item = "Vinos\n750ml", price = "$69.000" });
+                    mItems3.Add(new Menu() { item = "Copa de vino de la casa", price = "$1.0000" });
+                    mItems3.Add(new Menu() { item = "Ron Medellin\n375 ml", price = "$55.000" });
+                    mItems3.Add(new Menu() { item = "Ron Medellin\n750 ml", price = "$75.000" });
+                    mItems3.Add(new Menu() { item = "Ron Medellin 8 años\n375 ml", price = "$69.000" });
+                    mItems3.Add(new Menu() { item = "Ron Medellin 8 años\n750 ml", price = "$99.000" });
+                    mItems3.Add(new Menu() { item = "Ron Viejo de Caldas\n375 ml", price = "$55.000" });
+                    mItems3.Add(new Menu() { item = "Ron Viejo de Caldas\n750 ml", price = "$75.000" });
+                    mItems3.Add(new Menu() { item = "Aguardiente antioqueño sin Azucar\n375 ml", price = "$45.000" });
+                    mItems3.Add(new Menu() { item = "Aguardiente antioqueño sin Azucar\n750 ml", price = "$69.000" });
+                    mItems3.Add(new Menu() { item = "Trago doble de Whisky", price = "$15.000" });
+                    mItems3.Add(new Menu() { item = "Trago doble de Tequila", price = "$15.000" });
+                    mItems3.Add(new Menu() { item = "Trago doble de Ron", price = "$15.000" });
+                    mItems3.Add(new Menu() { item = "Trago doble de Vodka", price = "$15.000" });
+                    mItems3.Add(new Menu() { item = "Smirnoff Ice\n355 ml", price = "$9.000" });
+                    */
+                    break;
+                case 2: //reservas
+                    break;
+                case 3: //contactos
+                    ShowFragment(mfragment4);
+                    mListView4 = FindViewById<ListView>(Resource.Id.myListView4);
+                    mItems4 = new List<Menu>();
+                    mItems4.Add(new Menu() { item = "Facebook", price = "www.martinibar.com.co", idImage = Resource.Drawable.Icon, description = "Martinibar Bucaramanga" });
+                    mItems4.Add(new Menu() { item = "Direccion", description = "Calle 48 No. 32-32", price = "Cabecera", idImage = Resource.Drawable.martinibarmap });
+                    mItems4.Add(new Menu() { item = "Telefonos", description = "318 347 4685 - 316 268 8925", price = "652 00 99 - 691 3707", idImage = Resource.Drawable.Icon });
+                    MyListViewAdapter adapter4 = new MyListViewAdapter(this, mItems4);
+                    mListView4.Adapter = adapter4;
+                    break;
+            }
+
         }
 
         private void ShowFragment(SupportFragment fragment)
@@ -202,6 +311,7 @@ namespace MartiniBar
         }
 
        
+
     }
 }
 

@@ -24,7 +24,8 @@ namespace MartiniBar.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resource.Layout.Fragment1,container,false);
+            View view = inflater.Inflate(Resource.Layout.Fragment1,container,false);          
+
             return view;
         }
     }
